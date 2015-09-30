@@ -1,12 +1,19 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Rain</title>
+  <title>Repository Agnostic INgest</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
+
+<% if user_signed_in? %>
+  <p>Welcome <%= current_user.email %></p>
+  <%= link_to("Sign out", destroy_user_session_path, method: :delete, id: "sign_in") %>
+<% else %>
+  <%= link_to("Sign in", user_omniauth_authorize_path(:mit_oauth2), id: "sign_in") %>
+<% end %>
 
 <%= yield %>
 
