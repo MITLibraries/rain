@@ -1,5 +1,9 @@
 # Repository Agnostic INgest (RAIN)
 
+[![Coverage Status](https://coveralls.io/repos/MITLibraries/rain/badge.svg?branch=pre_workflow_cleanup&service=github)](https://coveralls.io/github/MITLibraries/rain?)
+[![Dependency Status](https://gemnasium.com/MITLibraries/rain.svg)](https://gemnasium.com/MITLibraries/rain)
+[![Code Climate](https://codeclimate.com/github/MITLibraries/rain/badges/gpa.svg)](https://codeclimate.com/github/MITLibraries/rain)
+
 ## What is this?
 
 RAIN will initially be a system in which admin users can create workflows for

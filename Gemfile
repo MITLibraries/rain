@@ -34,9 +34,10 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'devise'
 gem 'omniauth-mit-oauth2'
 gem 'http_logger'
-gem 'simplecov', :require => false, :group => :test
+gem 'coveralls', require: false
 gem 'minitest-reporters'
 gem 'annotate'
+gem 'acts_as_list'
 
 group :development, :test do
   gem 'byebug'
