@@ -1,0 +1,26 @@
+# == Schema Information
+#
+# Table name: elements
+#
+#  id              :integer          not null, primary key
+#  workflow_id     :integer
+#  element_type_id :integer
+#  label           :string
+#  help            :string
+#  error           :string
+#  parent_id       :integer
+#  required        :boolean          default(FALSE)
+#  position        :integer
+#  created_at      :datetime         not null
+#  updated_at      :datetime         not null
+#
+
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+# This model initially had no columns defined.  If you add columns to the
+# model remove the '{}' from the fixture names and add the columns immediately
+# below each fixture, per the syntax in the comments below
+#
+one:
+  workflow_id: 1
+  element_type_id: 1

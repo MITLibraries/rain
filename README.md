@@ -20,7 +20,7 @@ It doesn't.
 ### Ingest workflow creator
 
 The gist is that it'll treat an HTML form like a tree and allow the nodes of the tree to be
-added and manipulated based on rules of how HTML forms actualy work.
+added and manipulated based on rules of how HTML forms work.
 
 For instance, `fieldset` can be added to a `form` element, but a `form` cannot be added to
 a `fieldset`.
