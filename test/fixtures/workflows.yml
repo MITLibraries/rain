@@ -15,9 +15,7 @@
 # below each fixture, per the syntax in the comments below
 #
 workflow_one:
-  id: 1
   name: 'popcorn flow'
 
 two:
-  id: 2
   name: 'doe'

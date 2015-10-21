@@ -1,0 +1,3 @@
+<form class="form-horizontal" action="<%= workflow_submit_path(@workflow.id) %>" method="post">
+  <input name="authenticity_token" type="hidden" value="#{session[:_csrf_token]}" />
+  <span id="helpBlock" class="help-block">* indicates required field.</span>

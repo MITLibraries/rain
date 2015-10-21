@@ -40,6 +40,15 @@ class Element < ActiveRecord::Base
     ElementType.where(id: accepted_element_type_ids).order(:name)
   end
 
+  def display_id
+    "#{element_type.name}_#{id}"
+  end
+
+  def display_label
+    return label unless required
+    "* #{label}"
+  end
+
   def legal_parent
     return unless parent.present?
     return if parent.accepts_type?(element_type)
@@ -47,7 +56,9 @@ class Element < ActiveRecord::Base
   end
 
   def traverse(&block)
+    yield self, '_open'
     yield self
     children.map { |child| child.traverse(&block) }
+    yield self, '_close'
   end
 end
