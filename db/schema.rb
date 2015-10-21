@@ -11,15 +11,48 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150929173815) do
-
-  create_table "users", force: :cascade do |t|
-    t.string   "email",      null: false
-    t.string   "uid",        null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+ActiveRecord::Schema.define(version: 20_151_007_191_505) do
+  create_table 'element_type_accepts', force: :cascade do |t|
+    t.integer 'element_type_id'
+    t.integer 'accepts_element_type_id'
+    t.datetime 'created_at',              null: false
+    t.datetime 'updated_at',              null: false
   end
 
-  add_index "users", ["uid"], name: "index_users_on_uid", unique: true
+  create_table 'element_types', force: :cascade do |t|
+    t.string 'name'
+    t.datetime 'created_at', null: false
+    t.datetime 'updated_at', null: false
+  end
 
+  create_table 'elements', force: :cascade do |t|
+    t.integer 'workflow_id'
+    t.integer 'element_type_id'
+    t.string 'label'
+    t.string 'help'
+    t.string 'error'
+    t.integer 'parent_id'
+    t.boolean 'required', default: false
+    t.integer 'position'
+    t.datetime 'created_at',                      null: false
+    t.datetime 'updated_at',                      null: false
+  end
+
+  add_index 'elements', ['element_type_id'], name: 'index_elements_on_element_type_id'
+  add_index 'elements', ['workflow_id'], name: 'index_elements_on_workflow_id'
+
+  create_table 'users', force: :cascade do |t|
+    t.string 'email',      null: false
+    t.string 'uid',        null: false
+    t.datetime 'created_at', null: false
+    t.datetime 'updated_at', null: false
+  end
+
+  add_index 'users', ['uid'], name: 'index_users_on_uid', unique: true
+
+  create_table 'workflows', force: :cascade do |t|
+    t.string 'name', null: false
+    t.datetime 'created_at', null: false
+    t.datetime 'updated_at', null: false
+  end
 end
