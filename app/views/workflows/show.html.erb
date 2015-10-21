@@ -1,0 +1,6 @@
+<h1><%= @workflow.name %></h1>
+
+<% @workflow.elements.first.traverse do |element, partial| %>
+  <%= render partial: "workflows/elements/#{element.element_type.name}#{partial}",
+             locals: { element: element } %>
+<% end %>

@@ -22,5 +22,5 @@
 # below each fixture, per the syntax in the comments below
 #
 one:
-  workflow_id: 1
-  element_type_id: 1
+  workflow: workflow_one
+  element_type: form

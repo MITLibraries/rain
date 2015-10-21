@@ -15,37 +15,31 @@
 # below each fixture, per the syntax in the comments below
 #
 form:
-  id: 1
   name: 'form'
 
-input_text:
-  id: 2
-  name: 'input_text'
-
-input_radio:
-  id: 3
-  name: 'input_radio'
-
-input_checkbox:
-  id: 4
-  name: 'input_checkbox'
-
-input_submit:
-  id: 5
-  name: 'input_submit'
-
-textarea:
-  id: 6
-  name: 'textarea'
-
 fieldset:
-  id: 7
   name: 'fieldset'
 
+text:
+  name: 'text'
+
+textarea:
+  name: 'textarea'
+
 select:
-  id: 8
   name: 'select'
 
 option:
-  id: 9
   name: 'option'
+
+checkbox:
+  name: 'checkbox'
+
+radio_group:
+  name: 'radio_group'
+
+radio:
+  name: 'radio'
+
+submit:
+  name: 'submit'
