@@ -13,7 +13,7 @@ require 'test_helper'
 
 class ElementTypeAcceptTest < ActiveSupport::TestCase
   def setup
-    @element_type_accepts = element_type_accepts(:form_input_text)
+    @element_type_accepts = element_type_accepts(:form_text)
   end
 
   test 'is valid' do
@@ -32,11 +32,11 @@ class ElementTypeAcceptTest < ActiveSupport::TestCase
 
   test 'element type can be nested if allowed' do
     @element_type_one = element_types(:form)
-    @element_type_two = element_types(:input_text)
+    @element_type_two = element_types(:text)
   end
 
   test 'element type cannot be nested if not allowed' do
     @element_type_one = element_types(:form)
-    @element_type_two = element_types(:input_text)
+    @element_type_two = element_types(:text)
   end
 end

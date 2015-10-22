@@ -15,14 +15,18 @@
 # model remove the '{}' from the fixture names and add the columns immediately
 # below each fixture, per the syntax in the comments below
 #
-form_input_text:
-  element_type_id: 1
-  accepts_element_type_id: 2
+form_text:
+  element_type_id: <%= ActiveRecord::FixtureSet.identify(:form) %>
+  accepts_element_type_id: <%= ActiveRecord::FixtureSet.identify(:text) %>
+
+form_submit:
+  element_type_id: <%= ActiveRecord::FixtureSet.identify(:form) %>
+  accepts_element_type_id: <%= ActiveRecord::FixtureSet.identify(:submit) %>
 
 form_fieldset:
-  element_type_id: 1
-  accepts_element_type_id: 7
+  element_type_id: <%= ActiveRecord::FixtureSet.identify(:form) %>
+  accepts_element_type_id: <%= ActiveRecord::FixtureSet.identify(:fieldset) %>
 
-fieldset_input_text:
-  element_type_id: 7
-  accepts_element_type_id: 2
+fieldset_text:
+  element_type_id: <%= ActiveRecord::FixtureSet.identify(:fieldset) %>
+  accepts_element_type_id: <%= ActiveRecord::FixtureSet.identify(:text) %>
