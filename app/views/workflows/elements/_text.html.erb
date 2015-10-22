@@ -1,0 +1,16 @@
+<% on_error = true if @form_errors && @form_errors.include?(element.display_id) %>
+
+<div class="form-group <%= 'has-error' if on_error %>">
+  <label for="<%= element.display_id %>" class="col-sm-2 control-label"><%= element.display_label %></label>
+  <div class="col-sm-10">
+    <input type="text" class="form-control" id="<%= element.display_id %>"
+           name="<%= element.display_id %>" placeholder="<%= element.label %>"
+           value="<%= params[element.display_id] %>">
+    <% if element.help %>
+      <span id="helpBlock" class="help-block"><%= element.help %></span>
+    <% end %>
+    <% if on_error %>
+      <span class='help-block'><%= element.error %></span>
+    <% end %>
+  </div>
+</div>

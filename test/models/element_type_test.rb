@@ -16,7 +16,7 @@ class ElementTypeTest < ActiveSupport::TestCase
   end
 
   test 'element_type_count' do
-    assert_equal(9, ElementType.count)
+    assert_equal(10, ElementType.count)
   end
 
   test 'is valid' do
